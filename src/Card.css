@@ -1,6 +1,17 @@
 .Card {
-  padding: 10px;
-  margin: 20px 10px;
   background: #e6e6e6;
   text-align: center;
+  display: grid;
+  padding: 20px;
+  box-shadow: 0 4px 8px #0006;
+  border-radius: 4px;
+}
+
+.Card img {
+  width: 100%;
+  height: auto;
+}
+
+.Card ul {
+  list-style: none;
 }
