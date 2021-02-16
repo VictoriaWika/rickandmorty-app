@@ -1,9 +1,14 @@
+import Card from './Card'
+import { results } from './rickandmortyapi.json'
+
 function App() {
   return (
     <div className="App">
-      Hello World
+      {results.map(({ name, species, image, id }) => (
+        <Card key={id} name={name} species={species} image={image} />
+      ))}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
