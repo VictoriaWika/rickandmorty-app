@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import './Button.css'
+import Button from '../Button/Button'
 import './Card.css'
+
+import { ReactComponent as HumanSvg } from '../../human.svg'
+import { ReactComponent as AlienSvg } from '../../alien.svg'
 
 export default function Card({
   name,
@@ -11,27 +14,21 @@ export default function Card({
   origin,
   location,
 }) {
-  const icon = species === 'Human' ? '👨🏼' : '👽'
+  const human = <HumanSvg />
+  const alien = <AlienSvg />
+  const icon = species === 'Human' ? human : alien
   const [isShowingDetails, setIsShowingDetails] = useState(false)
-  const [isClicked, setIsClicked] = useState(false)
 
   return (
     <section className="Card">
       <h2>{name}</h2>
-      {icon}
+      <span>{icon}</span>
       <p>{species}</p>
       <img src={image} alt="" />
-      <button
-        onClick={event => {
-          console.log('Hello')
-          event.stopPropagation()
-          setIsClicked(!isClicked)
-          setIsShowingDetails(!isShowingDetails)
-        }}
-        className="Button"
-      >
-        {isClicked ? 'Hide Details' : 'Show Details'}
-      </button>
+      <Button
+        title={isShowingDetails ? 'Hide Details' : 'Show Details'}
+        onClick={() => setIsShowingDetails(!isShowingDetails)}
+      />
       <ul hidden={!isShowingDetails}>
         <li>Status: {status} </li>
         <li>Gender: {gender}</li>
