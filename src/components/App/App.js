@@ -3,7 +3,7 @@ import Button from '../Button'
 import Card from '../Card'
 import './App.css'
 
-function App() {
+export default function App() {
   const [characters, setCharacters] = useState([])
   const [userInput, setUserInput] = useState('')
   const [filteredSpecies, setFilteredSpecies] = useState('all')
@@ -73,5 +73,3 @@ function App() {
     </div>
   )
 }
-
-export default App
