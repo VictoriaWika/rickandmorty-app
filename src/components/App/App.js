@@ -3,8 +3,9 @@ import Button from '../Button'
 import Card from '../Card'
 import './App.css'
 
-function App() {
+export default function App() {
   const [characters, setCharacters] = useState([])
+  const [userInput, setUserInput] = useState('')
   const [filteredSpecies, setFilteredSpecies] = useState('all')
 
   useEffect(() => {
@@ -25,6 +26,11 @@ function App() {
 
   return (
     <div className="App">
+      <input
+        value={userInput}
+        onChange={event => setUserInput(event.target.value)}
+        placeholder="Who's your favourite character?"
+      />
       <section className="buttonContainer">
         <Button
           onClick={() => setFilteredSpecies('Human')}
@@ -47,6 +53,9 @@ function App() {
           character =>
             filteredSpecies === 'all' || character.species === filteredSpecies
         )
+        .filter(character =>
+          character.name.toLowerCase().includes(userInput.toLowerCase())
+        )
         .map(
           ({ name, species, image, status, gender, origin, location, id }) => (
             <Card
@@ -64,5 +73,3 @@ function App() {
     </div>
   )
 }
-
-export default App
