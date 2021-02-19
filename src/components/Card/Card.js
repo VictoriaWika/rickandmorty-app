@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Button from '../Button/Button'
+import Button from '../Button'
 import './Card.css'
 
 import { ReactComponent as HumanSvg } from '../../human.svg'
@@ -26,7 +26,7 @@ export default function Card({
       <p>{species}</p>
       <img src={image} alt="" />
       <Button
-        title={isShowingDetails ? 'Hide Details' : 'Show Details'}
+        text={isShowingDetails ? 'Hide Details' : 'Show Details'}
         onClick={() => setIsShowingDetails(!isShowingDetails)}
       />
       <ul hidden={!isShowingDetails}>
