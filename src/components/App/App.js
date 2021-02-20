@@ -26,12 +26,19 @@ export default function App() {
 
   return (
     <div className="App">
-      <input
-        value={userInput}
-        onChange={event => setUserInput(event.target.value)}
-        placeholder="Who's your favourite character?"
-      />
+      <div className="input__container">
+        <input
+          value={userInput}
+          onChange={event => setUserInput(event.target.value)}
+          placeholder="Who's your favourite character?"
+        />
+      </div>
       <section className="buttonContainer">
+        <Button
+          onClick={() => setFilteredSpecies('all')}
+          disabled={filteredSpecies === 'all'}
+          text={'All'}
+        />
         <Button
           onClick={() => setFilteredSpecies('Human')}
           disabled={filteredSpecies === 'Human'}
@@ -43,15 +50,22 @@ export default function App() {
           text={'Alien'}
         />
         <Button
-          onClick={() => setFilteredSpecies('all')}
-          disabled={filteredSpecies === 'all'}
-          text={'All'}
+          onClick={() => setFilteredSpecies('Others')}
+          disabled={filteredSpecies === 'Others'}
+          text={'Other Species'}
         />
       </section>
       {characters
         .filter(
           character =>
-            filteredSpecies === 'all' || character.species === filteredSpecies
+            filteredSpecies === 'all' ||
+            filteredSpecies === 'Others' ||
+            character.species === filteredSpecies
+        )
+        .filter(
+          character =>
+            filteredSpecies !== 'Others' ||
+            (character.species !== 'Human' && character.species !== 'Alien')
         )
         .filter(character =>
           character.name.toLowerCase().includes(userInput.toLowerCase())
