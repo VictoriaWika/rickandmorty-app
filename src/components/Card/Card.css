@@ -5,6 +5,7 @@
   padding: 20px;
   box-shadow: 0 4px 8px #0006;
   border-radius: 4px;
+  position: relative;
 }
 
 .Card img {
@@ -13,7 +14,31 @@
   margin-bottom: 10px;
 }
 
+.Card h2 {
+  margin-bottom: 10px;
+}
+
+.Card p {
+  margin: 5px 0;
+}
+
 .Card ul {
   list-style: none;
   padding-left: 0;
+}
+
+.Card__button-container {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 25px;
+  bottom: -3px;
+}
+
+.Card__like {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
