@@ -4,22 +4,24 @@
   font-size: 0.8rem;
   border: 1px solid black;
   background: transparent;
-  padding: 6px 12px;
+  padding: 6px 30px;
   text-transform: uppercase;
 }
 
-.buttonContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+.Button__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.buttonContainer Button {
+.Button__container Button {
   background: black;
   color: white;
+  width: auto;
+  flex-grow: 1;
 }
 
-.buttonContainer Button[disabled] {
+.Button__container Button[disabled] {
   background: rgb(213, 213, 213);
   color: white;
   border: none;
