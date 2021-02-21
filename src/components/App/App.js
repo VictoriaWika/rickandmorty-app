@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import AppHeader from '../AppHeader'
 import Button from '../Button'
 import Card from '../Card'
 import './App.css'
@@ -26,6 +27,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <AppHeader title={'Rick and Morty'} />
       <div className="input__container">
         <input
           value={userInput}
@@ -33,7 +35,7 @@ export default function App() {
           placeholder="Who's your favourite character?"
         />
       </div>
-      <section className="buttonContainer">
+      <section className="Button__container">
         <Button
           onClick={() => setFilteredSpecies('all')}
           disabled={filteredSpecies === 'all'}
