@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <HomePage hidden={currentPage !== 'HomePage'} />
+      <HomePage characters={characters} hidden={currentPage !== 'HomePage'} />
       <CharacterPage
         hidden={currentPage !== 'CharacterPage'}
         characters={characters}
