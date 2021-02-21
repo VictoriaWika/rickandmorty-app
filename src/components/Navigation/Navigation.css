@@ -1,0 +1,17 @@
+.Navigation {
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  background: black;
+  z-index: 30;
+}
+
+.Navigation button {
+  border: none;
+  color: white;
+  padding: 6px 14px;
+}

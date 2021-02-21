@@ -4,7 +4,7 @@
   font-size: 0.8rem;
   border: 1px solid black;
   background: transparent;
-  padding: 6px 30px;
+  padding: 6px 14px;
   text-transform: uppercase;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .Button__container Button[disabled] {
-  background: rgb(213, 213, 213);
-  color: white;
-  border: none;
+  background: #e6e6e6;
+  color: black;
+  border: 1px solid #e6e6e6;
 }

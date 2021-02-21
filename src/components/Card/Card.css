@@ -3,9 +3,14 @@
   text-align: center;
   display: grid;
   padding: 20px;
-  box-shadow: 0 4px 8px #0006;
   border-radius: 4px;
   position: relative;
+  max-width: 335px;
+  z-index: 3;
+}
+
+.Card:last-child {
+  margin-bottom: 44px;
 }
 
 .Card img {
