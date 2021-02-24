@@ -7,6 +7,7 @@ import './App.css'
 export default function App() {
   const [characters, setCharacters] = useState([])
   const [currentPage, setCurrentPage] = useState('HomePage')
+  const [data, setData] = useState(characters)
 
   useEffect(() => {
     getAllCharacters()
@@ -26,7 +27,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <HomePage hidden={currentPage !== 'HomePage'} />
+      <HomePage
+        characters={characters}
+        hidden={currentPage !== 'HomePage'}
+        filterRandom={filterRandom}
+        data={data}
+      />
       <CharacterPage
         hidden={currentPage !== 'CharacterPage'}
         characters={characters}
@@ -34,4 +40,9 @@ export default function App() {
       <Navigation onNavigate={setCurrentPage} />
     </div>
   )
+
+  function filterRandom(characters) {
+    const randomNumber = Math.floor(Math.random() * characters.length)
+    return setData([characters[randomNumber - 1]])
+  }
 }

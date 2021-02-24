@@ -20,6 +20,8 @@
 }
 
 .Card h2 {
+  max-width: 270px;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 

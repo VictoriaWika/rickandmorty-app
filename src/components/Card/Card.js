@@ -16,6 +16,7 @@ export default function Card({
   gender,
   origin,
   location,
+  episode,
 }) {
   const human = <HumanSVG />
   const alien = <AlienSVG />
@@ -58,6 +59,7 @@ export default function Card({
         <li>Gender: {gender}</li>
         <li>Origin: {origin} </li>
         <li>Location: {location}</li>
+        <li>Episode Count: {episode.length}</li>
       </ul>
     </section>
   )
