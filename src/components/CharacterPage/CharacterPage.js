@@ -8,6 +8,14 @@ export default function CharacterPage({ characters, hidden }) {
   const [userInput, setUserInput] = useState('')
   const [filteredSpecies, setFilteredSpecies] = useState('all')
 
+  // const term = userInput // search query we want to highlight in results
+  // const results = function () {
+  //   return <mark>${userInput}</mark>
+  // }
+  // results.replace(new RegExp(term, 'gi'), match => `<mark>${match}</mark>`)
+
+  // https://bitsofco.de/a-one-line-solution-to-highlighting-search-matches/
+
   return (
     <section hidden={hidden} className="CharacterPage">
       <AppHeader title={'Characters'} />
