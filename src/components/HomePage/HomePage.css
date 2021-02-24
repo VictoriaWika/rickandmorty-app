@@ -2,8 +2,32 @@
   display: grid;
   gap: 15px;
   margin: 20px;
+  margin-bottom: 60px;
 }
 
-.m-t60 {
-  margin-top: 60px;
+.m-t40 {
+  margin-top: 40px;
+}
+
+.RandomCharacter {
+  text-align: center;
+}
+
+.RandomCharacter img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.RandomCharacter h2 {
+  margin-bottom: 10px;
+}
+
+.RandomCharacter p {
+  margin: 5px 0;
+}
+
+.RandomCharacter ul {
+  list-style: none;
+  padding-left: 0;
 }

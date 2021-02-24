@@ -56,7 +56,17 @@ export default function CharacterPage({ characters, hidden }) {
           character.name.toLowerCase().includes(userInput.toLowerCase())
         )
         .map(
-          ({ name, species, image, status, gender, origin, location, id }) => (
+          ({
+            name,
+            species,
+            image,
+            status,
+            gender,
+            origin,
+            location,
+            episode,
+            id,
+          }) => (
             <Card
               key={id}
               name={name}
@@ -66,6 +76,7 @@ export default function CharacterPage({ characters, hidden }) {
               gender={gender}
               origin={origin.name}
               location={location.name}
+              episode={episode}
             />
           )
         )}
