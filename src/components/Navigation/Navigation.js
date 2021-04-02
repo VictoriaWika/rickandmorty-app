@@ -6,8 +6,6 @@ export default function Navigation({ onNavigate }) {
     <nav className="Navigation">
       <Button text={'Home'} onClick={() => onNavigate('HomePage')} />
       <Button text={'Characters'} onClick={() => onNavigate('CharacterPage')} />
-      {/* <Button text={'UFO'} onClick={() => onNavigate('UFO')} />
-      <Button text={'NoIdea'} onClick={() => onNavigate('NoIdea')} /> */}
     </nav>
   )
 }

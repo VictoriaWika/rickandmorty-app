@@ -55,9 +55,9 @@ export default function Card({
         />
       </section>
       <ul hidden={!isShowingDetails}>
-        <li>Status: {status} </li>
+        <li>Status: {status}</li>
         <li>Gender: {gender}</li>
-        <li>Origin: {origin} </li>
+        <li>Origin: {origin}</li>
         <li>Location: {location}</li>
         <li>Episode Count: {episode.length}</li>
       </ul>
